@@ -8,8 +8,8 @@ export default function Guests() {
     return (
         
         <div className="guests">
-            {search!==null ? search.filter(guest => !filterGuest || guest.isconfirmed).map(guest=> <Guest key={guest._id} guest={guest}/>):
-            guests.length!==0 ? guests.filter(guest => !filterGuest || guest.isconfirmed).map(guest=> <Guest key={guest._id} guest={guest}/>):null}
+            {search!==null ? Object.values(search).filter(guest => !filterGuest || guest.isconfirmed).map(guest=> <Guest key={guest._id} guest={guest}/>):
+            guests.length!==0 ? Object.values(guests).filter(guest => !filterGuest || guest.isconfirmed).map(guest=> <Guest key={guest._id} guest={guest}/>):null}
         </div>
     )
 }

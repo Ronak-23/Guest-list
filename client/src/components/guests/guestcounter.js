@@ -5,7 +5,7 @@ import GuestContext from '../../context/guestcontext/guestcontext'
 export default function Guestcounter() {
   const {guests} = useContext(GuestContext)
   const totalInvited = guests.length
-  const attending = guests.filter(guest=> guest.isconfirmed=== true)
+  const attending = Object.values(guests).filter(guest=> guest.isconfirmed=== true)
   const TotalAttending = attending.length
   function totalbydiet(type)
   {

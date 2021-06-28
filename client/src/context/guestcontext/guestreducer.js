@@ -13,7 +13,7 @@ const guestReducer= ( state , {type,payload} ) => {
         case GET_GUEST:
             return{
                 ...state,
-                guests:payload
+                guests:[payload]
             }
         case EDIT_GUEST:
             return{

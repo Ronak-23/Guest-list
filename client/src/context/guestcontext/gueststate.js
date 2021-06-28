@@ -20,8 +20,7 @@ export default function Gueststate(props){
         search : null,
         editguest : null,
         errors:null,
-        guests :[
-        ]
+        guests :[]
     } 
     const [state, dispatch] = useReducer(Guestreducer, initialState)
 

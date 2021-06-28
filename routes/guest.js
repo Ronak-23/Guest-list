@@ -7,7 +7,7 @@ const Guest = require('../models/Guest')
 router.get('/',auth, async (req,res) =>{
     try {
         const guests = await Guest.find({user : req.user.id})
-        res.json(guests)
+        res.send(guests)
     } catch (err) {
         console.error(err.message)
         res.status(500).send('Server Error')

@@ -1,13 +1,13 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import GuestContext from '../../context/guestcontext/guestcontext.js'
 import Guest from './guest.js'
 
 export default function Guests() {
     const {guests, filterGuest, search} = useContext(GuestContext)
-    // useEffect(()=>{
-       
-    //     // eslint-disable-next-line
-    // },[])
+    useEffect(()=>{
+        getGuest()
+        // eslint-disable-next-line
+    },[])
     return (
         
         <div className="guests">

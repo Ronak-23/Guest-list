@@ -11,7 +11,7 @@ export default function Home (){
     
     useEffect(()=>{
         getUser()
-        getGuest()
+        
         // eslint-disable-next-line
     },[])
     

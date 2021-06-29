@@ -3,7 +3,7 @@ import GuestContext from '../../context/guestcontext/guestcontext.js'
 import Guest from './guest.js'
 
 export default function Guests() {
-    const {guests, filterGuest, search} = useContext(GuestContext)
+    const {guests, filterGuest, search,getGuest} = useContext(GuestContext)
     useEffect(()=>{
         getGuest()
         console.log(guests)

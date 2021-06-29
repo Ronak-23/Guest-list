@@ -4,7 +4,10 @@ import Guest from './guest.js'
 
 export default function Guests() {
     const {guests, filterGuest, search} = useContext(GuestContext)
-    
+    // useEffect(()=>{
+       
+    //     // eslint-disable-next-line
+    // },[])
     return (
         
         <div className="guests">

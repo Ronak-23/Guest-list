@@ -8,7 +8,7 @@ import AuthContext from '../../context/authContext/authcontext.js'
 import GuestContext from '../../context/guestcontext/guestcontext.js'
 export default function Home (){
     const {getUser} =useContext(AuthContext)
-    const {getGuest}= useContext(GuestContext)
+    
     useEffect(()=>{
         getUser()
         getGuest()

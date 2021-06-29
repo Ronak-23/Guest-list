@@ -10,7 +10,7 @@ export default function Navbar(){
     }
     const userLinks =(
         <Fragment>
-             <li>Hello, {user && user.name}</li>
+             <li>Hi, {user && user.name}</li>
             <span className="sm-hide">|</span>
             <li>
                 <a href="#!">

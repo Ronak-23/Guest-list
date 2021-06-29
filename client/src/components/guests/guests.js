@@ -6,6 +6,7 @@ export default function Guests() {
     const {guests, filterGuest, search} = useContext(GuestContext)
     useEffect(()=>{
         getGuest()
+        console.log(guests)
         // eslint-disable-next-line
     },[])
     return (

@@ -12,7 +12,6 @@ export default function Guests() {
     return (
         
         <div className="guests">
-            console.log(guests)
             {search!==null ? search.filter(guest => !filterGuest || guest.isconfirmed).map(guest=> <Guest key={guest._id} guest={guest}/>):
             guests.length!==0 ? guests.filter(guest => !filterGuest || guest.isconfirmed).map(guest=> <Guest key={guest._id} guest={guest}/>):null}
             {/* {console.log(guests)} */}

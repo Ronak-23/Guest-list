@@ -26,7 +26,9 @@ export default function Gueststate(props){
 
     const getGuest = async ()=>{
         try {
-            const res = await axios.get('/guests')
+            const res = await axios.get('/guests',{
+                headers:{"access-control-allow-origin": "*"}
+            })
             dispatch({
                 type:GET_GUEST,
                 payload: res.data
@@ -34,7 +36,7 @@ export default function Gueststate(props){
         } catch (err) {
             dispatch({
                 type:GUEST_ERROR,
-                payload: err.response.msg
+                payload: err
             })
         }
     }
@@ -48,9 +50,11 @@ export default function Gueststate(props){
         
         try {
             const res= await axios.post('/guests', guest, config)
+            
             dispatch({
                 type: ADD_GUEST,
                 payload: res.data
+
             })
         } catch (err) {
             dispatch({
